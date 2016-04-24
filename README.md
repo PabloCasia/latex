@@ -12,7 +12,7 @@ docker pull pablocasia/latex
 Compile a .tex file with pdflatex
 -----
 
-Only filename, without the .tex extension
+Only use filename, without the .tex extension
 ```bash
 docker run --rm -v `pwd`:/latex pablocasia/latex build filename
 ```
@@ -20,7 +20,7 @@ docker run --rm -v `pwd`:/latex pablocasia/latex build filename
 Compile a .tex file with pdflatex & Biber
 -----
 
-Only filename, without the .tex extension
+Only use filename, without the .tex extension
 ```bash
 docker run --rm -v `pwd`:/latex pablocasia/latex build_biber filename
 ```
@@ -28,7 +28,7 @@ docker run --rm -v `pwd`:/latex pablocasia/latex build_biber filename
 Compile a .tex file with xelatex
 -----
 
-Only filename, without the .tex extension
+Only use filename, without the .tex extension
 ```bash
 docker run --rm -v `pwd`:/latex pablocasia/latex build_xelatex filename
 ```
