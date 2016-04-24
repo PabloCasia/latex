@@ -12,15 +12,17 @@ docker pull pablocasia/latex
 Compile a .tex file
 -----
 
+Only filename, without the .tex extension
 ```bash
-docker run --rm -v `pwd`:/latex pablocasia/latex build file
+docker run --rm -v `pwd`:/latex pablocasia/latex build filename
 ```
 
 Compile a .tex file with Biber
 -----
 
+Only filename, without the .tex extension
 ```bash
-docker run --rm -v `pwd`:/latex pablocasia/latex build_biber file
+docker run --rm -v `pwd`:/latex pablocasia/latex build_biber filename
 ```
 
 Clean the log and other files
