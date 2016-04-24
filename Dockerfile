@@ -9,6 +9,9 @@ RUN chmod +x /usr/bin/build
 ADD build_biber /usr/bin/build_biber
 RUN chmod +x /usr/bin/build_biber
 
+ADD build_xelatex /usr/bin/build_xelatex
+RUN chmod +x /usr/bin/build_xelatex
+
 ADD clean /usr/bin/clean
 RUN chmod +x /usr/bin/clean
 

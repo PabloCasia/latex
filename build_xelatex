@@ -1,0 +1,3 @@
+#!/bin/sh
+
+xelatex "$1.tex" && xelatex "$1.tex"
