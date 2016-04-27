@@ -1,5 +1,5 @@
 FROM blang/latex
-MAINTAINER PabloCasia <casia85 at gmail dot com>
+MAINTAINER PabloCasia <casia85@gmail.com>
 
 RUN apt-get install -qy biber
 
