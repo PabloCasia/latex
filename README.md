@@ -31,7 +31,7 @@ docker run --rm -v `pwd`:/latex pablocasia/latex build -b filename
 docker run --rm -v `pwd`:/latex pablocasia/latex build_xelatex filename
 ```
 
-### Clean the log and other files after during the build
+### Clean the log and other files during the build
 
 Use -c option, examples:
 
