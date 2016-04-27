@@ -1,3 +1,32 @@
 #!/bin/sh
+clean=no
 
-xelatex "$1.tex" && xelatex "$1.tex"
+while getopts cV opt
+do
+    case $opt in
+    V)  echo "`basename $0 .sh`: LaTeX Script Version: 1.5 Author: PabloCasia"
+        exit 0;;
+    c)  clean=yes;;
+    esac
+done
+
+shift $(($OPTIND-1))
+
+for file in $*
+do
+  xelatex "$file.tex" && xelatex "$file.tex"
+
+  if [ $clean = yes ]
+  then
+    rm -rf *.aux
+    rm -rf *.bcf
+    rm -rf *.lof
+    rm -rf *.log
+    rm -rf *.lot
+    rm -rf *.out
+    rm -rf *.toc
+    rm -rf *.run.xml
+    rm -rf *.bbl
+    rm -rf *.blg
+  fi
+done

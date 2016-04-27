@@ -1,3 +1,42 @@
 #!/bin/sh
+clean=no
+biber=no
 
-pdflatex "$1.tex" && pdflatex "$1.tex"
+while getopts cbV opt
+do
+    case $opt in
+    V)  echo "`basename $0 .sh`: LaTeX Script Version: 1.5 Author: PabloCasia"
+        exit 0;;
+    c)  clean=yes;;
+    b)  biber=yes;;
+    esac
+done
+
+shift $(($OPTIND-1))
+
+for file in $*
+do
+  if [ $biber = yes ]
+  then
+    pdflatex "$file.tex" && biber "$file" && pdflatex "$file.tex"
+  fi
+
+  if [ $biber = no ]
+  then
+    pdflatex "$file.tex" && pdflatex "$file.tex"
+  fi
+
+  if [ $clean = yes ]
+  then
+    rm -rf *.aux
+    rm -rf *.bcf
+    rm -rf *.lof
+    rm -rf *.log
+    rm -rf *.lot
+    rm -rf *.out
+    rm -rf *.toc
+    rm -rf *.run.xml
+    rm -rf *.bbl
+    rm -rf *.blg
+  fi
+done

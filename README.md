@@ -1,40 +1,54 @@
-A docker for LaTeX
-=====
+# A docker for LaTeX
 
-Build
------
+
+## Build
 
 Pull image ([from Docker Hub](https://registry.hub.docker.com/u/pablocasia/latex)):
 ```bash
 docker pull pablocasia/latex
 ```
 
-Compile a .tex file with pdflatex
------
+## Compile a .tex file
 
 Only use filename, without .tex extension
+
+### with pdflatex
+
 ```bash
 docker run --rm -v `pwd`:/latex pablocasia/latex build filename
 ```
 
-Compile a .tex file with pdflatex & Biber
------
+### with pdflatex & Biber
 
-Only use filename, without .tex extension
+Use -b option, example:
 ```bash
-docker run --rm -v `pwd`:/latex pablocasia/latex build_biber filename
+docker run --rm -v `pwd`:/latex pablocasia/latex build -b filename
 ```
 
-Compile a .tex file with xelatex
------
+### with xelatex
 
-Only use filename, without .tex extension
 ```bash
 docker run --rm -v `pwd`:/latex pablocasia/latex build_xelatex filename
 ```
 
-Clean the log and other files
------
+### Clean the log and other files after during the build
+
+Use -c option, examples:
+
+```bash
+docker run --rm -v `pwd`:/latex pablocasia/latex build -c filename
+```
+
+```bash
+docker run --rm -v `pwd`:/latex pablocasia/latex build -cb filename
+```
+
+```bash
+docker run --rm -v `pwd`:/latex pablocasia/latex build_xelatex -c filename
+```
+
+
+### Clean the log and other files after the build
 
 ```bash
 docker run --rm -v `pwd`:/latex pablocasia/latex clean
