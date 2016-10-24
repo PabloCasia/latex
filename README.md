@@ -1,5 +1,7 @@
 # A docker for LaTeX
 
+[![](https://images.microbadger.com/badges/image/pablocasia/latex.svg)](https://microbadger.com/images/pablocasia/latex "Get your own image badge on microbadger.com")
+
 
 ## Build
 
