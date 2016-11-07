@@ -5,7 +5,7 @@
 
 ## Build
 
-Pull image ([from Docker Hub](https://registry.hub.docker.com/u/pablocasia/latex)):
+Pull image ([from Docker Hub](https://hub.docker.com/r/pablocasia/latex/)):
 ```bash
 docker pull pablocasia/latex
 ```
