@@ -2,7 +2,6 @@
 
 [![](https://images.microbadger.com/badges/image/pablocasia/latex.svg)](https://microbadger.com/images/pablocasia/latex "Get your own image badge on microbadger.com")
 
-
 ## Build
 
 Pull image ([from Docker Hub](https://hub.docker.com/r/pablocasia/latex/)):
